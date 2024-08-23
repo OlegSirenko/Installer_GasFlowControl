@@ -33,7 +33,7 @@ jobs:
       - name: Check path
         run: dir
       - name: Build WiX on Windows x86
-        run: cd GasFlowControl && wix build .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x86 -out .\out\Setup_GasFlowControl_x86.msi
+        run: cd GasFlowControl && wix build D:\a\Installer_GasFlowControl\Installer_GasFlowControlPackage.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControlFolders.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControlPackage.en-us.wxl D:\a\Installer_GasFlowControl\Installer_GasFlowControlMainComponents.wxs -arch x86 -out D:\a\Installer_GasFlowControl\Installer_GasFlowControl\out\Setup_GasFlowControl_x86.msi
       - name: Build WiX on Windows x64
         run: cd .\GasFlowControl && wix build .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x64 -out .\out\Setup_GasFlowControl_x64.msi
       - name: Upload a Build Artifact
