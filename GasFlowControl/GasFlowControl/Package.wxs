@@ -3,7 +3,7 @@
 		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 		<MediaTemplate EmbedCab="true"/>
 
-		<Icon Id="Icon" SourceFile="D:\Code\ImGUI_GasFlowControll\resources\icon_preporation\icon.ico"/>
+		<Icon Id="Icon" SourceFile="..\..\..\..\resources\icon_preporation\icon.ico"/>
 		<Property Id="ARPPRODUCTICON" Value="Icon" />
 		
 		<Feature Id="Main">
