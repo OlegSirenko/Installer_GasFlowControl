@@ -30,7 +30,8 @@ jobs:
 
       - name: Install WiX
         run: dotnet tool install --global wix
-
+      - name: Check path
+        run: dir
       - name: Build WiX on Windows x86
         run: wix build .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x86 -out .\out\Setup_GasFlowControl_x86.msi
       - name: Build WiX on Windows x64
