@@ -1,0 +1,18 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<Icon Id="icon.exe" SourceFile="D:\Code\ImGUI_GasFlowControll\resources\icon_preporation\icon_64.ico"/>
+
+		<ComponentGroup Id="Main" Directory="INSTALLFOLDER">
+			<File Id="fileMainExe" Name="GasFlowControlMonitoringApp.exe" Source="D:\Code\ImGUI_GasFlowControll\cmake-build-release\GasFlowControlMonitoringApp.exe" KeyPath="true">
+				<Shortcut Name="GasFlowControlMonitoringApp" Directory="DesktopFolder"
+						 Advertise="yes" WorkingDirectory="INSTALLFOLDER" Icon="icon.exe"/>
+
+				<Shortcut Name="GasFlowControlMonitoringApp" Directory="ProgramMenuFolder"
+						  Advertise="yes" WorkingDirectory="INSTALLFOLDER" Icon="icon.exe" />
+			</File>
+
+			<File Id="fileMainDll" Name="SDL2.dll" Source="D:\Code\ImGUI_GasFlowControll\cmake-build-release\SDL2.dll"/>
+			<File Id="fileMainIni" Name="imgui.ini" Source="D:\Code\ImGUI_GasFlowControll\cmake-build-release\imgui.ini"/>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
