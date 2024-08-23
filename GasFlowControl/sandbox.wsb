@@ -1,0 +1,8 @@
+<Configuration>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>C:\Users\TehnokraT\Documents\GitHub\Installer_GasFlowControl\GasFlowControl\GasFlowControl\bin\x64\Debug\en-US</HostFolder>
+      <SandboxFolder>C:\InstallerTEST</SandboxFolder>
+    </MappedFolder>
+  </MappedFolders>
+</Configuration>
