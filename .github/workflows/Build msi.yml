@@ -33,9 +33,9 @@ jobs:
       - name: Check path
         run: dir
       - name: Build WiX on Windows x86
-        run: wix build D:\a\Installer_GasFlowControl\Installer_GasFlowControl\Package.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\Folders.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\Package.en-us.wxl D:\a\Installer_GasFlowControl\Installer_GasFlowControl\MainComponents.wxs -arch x86 -out D:\a\Installer_GasFlowControl\Installer_GasFlowControl\out\Setup_GasFlowControl_x86.msi
+        run: wix build D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\Package.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\Folders.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\Package.en-us.wxl D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\MainComponents.wxs -arch x86 -out D:\a\Installer_GasFlowControl\Installer_GasFlowControl\out\Setup_GasFlowControl_x86.msi
       - name: Build WiX on Windows x64
-        run: wix build D:\a\Installer_GasFlowControl\Installer_GasFlowControl\Package.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\Folders.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\Package.en-us.wxl D:\a\Installer_GasFlowControl\Installer_GasFlowControl\MainComponents.wxs -arch x64 -out D:\a\Installer_GasFlowControl\Installer_GasFlowControl\out\Setup_GasFlowControl_x64.msi
+        run: wix build D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\Package.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\Folders.wxs D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\Package.en-us.wxl D:\a\Installer_GasFlowControl\Installer_GasFlowControl\GasFlowControl\MainComponents.wxs -arch x64 -out D:\a\Installer_GasFlowControl\Installer_GasFlowControl\out\Setup_GasFlowControl_x64.msi
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
