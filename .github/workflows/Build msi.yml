@@ -35,7 +35,7 @@ jobs:
       - name: Build WiX on Windows x86
         run: wix build .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x86 -out .\out\Setup_GasFlowControl_x86.msi
       - name: Build WiX on Windows x64
-        run: wix build .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x64 -out .\out\Setup_GasFlowControl_x64.msi
+        run: wix build .\GasFlowControl\Package.wxs .\GasFlowControl\Folders.wxs .\GasFlowControl\Package.en-us.wxl .\GasFlowControl\MainComponents.wxs -arch x64 -out .\out\Setup_GasFlowControl_x64.msi
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
