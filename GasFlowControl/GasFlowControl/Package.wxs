@@ -19,19 +19,19 @@
                 Return="ignore"
                 Execute="deferred"
                 Impersonate="no"
-                Bitness="always64"/>
+                />
         <CustomAction Id="InstallVC_Redist_x86"
                 Directory="INSTALLFOLDER"
                 ExeCommand="&quot;[INSTALLFOLDER]VC_Redist.x86.exe&quot;/quiet /norestart"
                 Return="check"
                 Execute="deferred"
                 Impersonate="no"
-                Bitness="always32"/>
+                />
 
         <!-- Schedule the custom action -->
         <InstallExecuteSequence>
-            <Custom Action="InstallVC_Redist_x64" After="InstallFiles"></Custom>
-            <Custom Action="InstallVC_Redist_x86" After="InstallFiles"></Custom>
+            <Custom Action="InstallVC_Redist_x64" After="InstallFiles" Condition="$(sys.BUILDARCH) = &quot;x64&quot;"></Custom>
+            <Custom Action="InstallVC_Redist_x86" After="InstallFiles" Condition="$(sys.BUILDARCH) = &quot;x86&quot;"></Custom>
         </InstallExecuteSequence>
 
 
