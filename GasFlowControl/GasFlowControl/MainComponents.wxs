@@ -12,8 +12,8 @@
 			</File>
 
 
-            <File Id="VC_Redist_x64" Name="VC_Redist_x64.exe" Source="..\..\..\..\resources\dinamic_libs\VC_Redist_x64.exe"/>
-            <File Id="VC_Redist_x86" Name="VC_Redist_x86.exe" Source="..\..\..\..\resources\dinamic_libs\VC_Redist_x86.exe"/>
+            <File Id="VC_Redist_x64" Name="VC_Redist_x64.exe" Source="..\..\..\..\resources\dinamic_libs\VC_Redist.x64.exe"/>
+            <File Id="VC_Redist_x86" Name="VC_Redist_x86.exe" Source="..\..\..\..\resources\dinamic_libs\VC_Redist.x86.exe"/>
 
 			<File Id="fileMainDll" Name="SDL2.dll" Source="..\..\..\..\resources\dinamic_libs\SDL2.dll"/>
 			<File Id="fileMainIni" Name="imgui.ini" Source="..\..\..\..\resources\imgui_configuration\imgui.ini"/>
