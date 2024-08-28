@@ -12,28 +12,5 @@
 		<Feature Id="Main">
 			<ComponentGroupRef Id="Main" />
 		</Feature>
-
-        <CustomAction Id="InstallVC_Redist_x64"
-                Directory="INSTALLFOLDER"
-                ExeCommand="&quot;[INSTALLFOLDER]VC_Redist.x64.exe&quot; /quiet /norestart"
-                Return="ignore"
-                Execute="deferred"
-                Impersonate="no"
-                />
-        <CustomAction Id="InstallVC_Redist_x86"
-                Directory="INSTALLFOLDER"
-                ExeCommand="&quot;[INSTALLFOLDER]VC_Redist.x86.exe&quot;/quiet /norestart"
-                Return="ignore"
-                Execute="deferred"
-                Impersonate="no"
-                />
-
-        <!-- Schedule the custom action -->
-        <InstallExecuteSequence>
-            <Custom Action="InstallVC_Redist_x64" After="InstallFiles"></Custom>
-            <Custom Action="InstallVC_Redist_x86" After="InstallFiles"></Custom>
-        </InstallExecuteSequence>
-
-
 	</Package>
 </Wix>
