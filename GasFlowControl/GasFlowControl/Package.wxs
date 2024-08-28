@@ -6,7 +6,7 @@
 		<Icon Id="Icon" SourceFile="..\..\..\..\resources\icon_preporation\icon.ico"/>
 		<Property Id="ARPPRODUCTICON" Value="Icon" />
 
-        <PropertyRef Id="VS2017_ROOT_FOLDER	" />
+        <PropertyRef Id="VS2017_ROOT_FOLDER" />
         <CustomActionRef Id="VS2017Setup" />
 
 		<Feature Id="Main">
