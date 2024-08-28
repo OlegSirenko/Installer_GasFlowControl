@@ -12,5 +12,16 @@
 		<Feature Id="Main">
 			<ComponentGroupRef Id="Main" />
 		</Feature>
+
+        <CustomAction Id="InstallVC_Redist_x64" FileKey="VC_Redist_x64" ExeCommand="/quiet /norestart" Return="check" Execute="deferred" Impersonate="no"/>
+        <CustomAction Id="InstallVC_Redist_x86" FileKey="VC_Redist_x86" ExeCommand="/quiet /norestart" Return="check" Execute="deferred" Impersonate="no"/>
+
+        <!-- Schedule the custom action -->
+        <InstallExecuteSequence>
+            <Custom Action="InstallVC_Redist_x64" After="InstallFiles">VersionNT64</Custom>
+            <Custom Action="InstallVC_Redist_x86" After="InstallFiles">NOT VersionNT64</Custom>
+        </InstallExecuteSequence>
+
+
 	</Package>
 </Wix>
