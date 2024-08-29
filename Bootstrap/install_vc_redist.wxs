@@ -13,10 +13,13 @@
 
     <BootstrapperApplication>
       <bal:WixStandardBootstrapperApplication
-        LicenseUrl="https://example.net/license.html"
+        LicenseUrl="https://github.com/OlegSirenko/Monitoring_GasFlowControl/blob/main/LICENSE"
         ShowVersion="yes"
         SuppressOptionsUI="yes"
-        Theme="hyperlinkLargeLicense" />
+        Theme="hyperlinkLargeLicense"
+        LogoFile="../../resources/new_icon.png"
+        />
+
     </BootstrapperApplication>
 
     <!-- v6.1 Service Pack 1 -->
