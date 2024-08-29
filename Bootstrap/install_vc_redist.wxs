@@ -147,20 +147,9 @@
           DownloadUrl="https://download.visualstudio.microsoft.com/download/pr/1754ea58-11a6-44ab-a262-696e194ce543/15B8F5B2106DC7A7BD83AB57B796770E0F4ECB891AD19BF655C9D6A9DA650AD2/VC_redist.arm64.exe" />
       </ExePackage>
 
-      <!-- Install x86 package on 32-bit systems -->
-      <PackageGroupRef Id="GasFlowControl_x86" Condition="NOT VersionNT64" />
-
-      <!-- Install x64 package on 64-bit systems -->
-      <PackageGroupRef Id="GasFlowControl_x64" Condition="VersionNT64" />
+      <MsiPackage SourceFile="../GasFlowControl/GasFlowControl/out/Setup_GasFlowControl_x86.msi" InstallCondition="NOT VersionNT64" />
+       <!-- Install x64 package on 64-bit systems -->
+      <MsiPackage SourceFile="../GasFlowControl/GasFlowControl/out/Setup_GasFlowControl_x64.msi" InstallCondition="VersionNT64" />
     </Chain>
   </Bundle>
-   <Fragment>
-      <PackageGroup Id="GasFlowControl_x86">
-        <MsiPackage SourceFile="Setup_GasFlowControl_x86.msi" />
-      </PackageGroup>
-
-      <PackageGroup Id="GasFlowControl_x64">
-        <MsiPackage SourceFile="Setup_GasFlowControl_x64.msi" />
-      </PackageGroup>
-    </Fragment>
 </Wix>
