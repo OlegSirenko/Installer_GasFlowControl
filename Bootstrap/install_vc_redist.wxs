@@ -17,7 +17,7 @@
         ShowVersion="yes"
         SuppressOptionsUI="yes"
         Theme="hyperlinkLargeLicense"
-        LogoFile="../../resources/new_icon.png"
+        LogoFile="..\..\..\resources/new_icon.png"
         />
 
     </BootstrapperApplication>
