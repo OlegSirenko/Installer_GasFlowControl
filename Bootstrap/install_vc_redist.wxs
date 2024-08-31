@@ -18,10 +18,13 @@
         ShowVersion="yes"
         SuppressOptionsUI="yes"
         Theme="hyperlinkLargeLicense"
+        ThemeFile = ".\HyperlinkLargeTheme.xml"
         LogoFile="..\..\..\resources/new_icon.png"
         />
 
     </BootstrapperApplication>
+
+    <Payload Name="icon.ico" SourceFile="..\..\..\resources\icon_preporation\icon_64.ico" Compressed="yes" />
 
     <!-- v6.1 Service Pack 1 -->
     <bal:Condition
