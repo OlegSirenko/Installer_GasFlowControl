@@ -22,7 +22,7 @@
         LogoFile="..\..\..\resources/new_icon.png"
         />
 
-        <Payload Name="icon.ico" SourceFile="..\..\..\resources\icon_preporation\icon_64.ico" Compressed="yes" />
+      <Payload Name="icon.ico" SourceFile="..\..\..\resources\icon_preporation\icon_64.ico" Compressed="yes" />
     </BootstrapperApplication>
 
 
