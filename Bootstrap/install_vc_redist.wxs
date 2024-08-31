@@ -3,7 +3,7 @@
   xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
 
   <Bundle
-    Name="Monitoring Application for Gas Flow Control System"
+    Name="Gas Flow Control Monitoring Application"
     Version="1.0.0.0"
     Manufacturer="Oleg Sirenko"
     Copyright="© 2024 Oleg Sirenko"
@@ -22,9 +22,10 @@
         LogoFile="..\..\..\resources/new_icon.png"
         />
 
+        <Payload Name="icon.ico" SourceFile="..\..\..\resources\icon_preporation\icon_64.ico" Compressed="yes" />
     </BootstrapperApplication>
 
-    <Payload Name="icon.ico" SourceFile="..\..\..\resources\icon_preporation\icon_64.ico" Compressed="yes" />
+
 
     <!-- v6.1 Service Pack 1 -->
     <bal:Condition

@@ -4,7 +4,7 @@
 
 		<ComponentGroup Id="Main" Directory="INSTALLFOLDER">
 			<File Id="fileMainExe" Name="GasFlowControlMonitoringApp.exe" Source="..\..\..\..\cmake-build-release\Release\GasFlowControlMonitoringApp.exe" KeyPath="true">
-				<Shortcut Name="GasFlowControlMonitoringApp" Directory="DesktopFolder"
+				<Shortcut Name="Gas Flow Control Monitoring Application" Directory="DesktopFolder"
 						 Advertise="yes" WorkingDirectory="INSTALLFOLDER" Icon="icon.exe"/>
 
 				<Shortcut Name="GasFlowControlMonitoringApp" Directory="ProgramMenuFolder"
