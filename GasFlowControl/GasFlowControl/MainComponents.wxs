@@ -12,6 +12,8 @@
 			</File>
 
 			<File Id="fileMainDll" Name="SDL2.dll" Source="..\..\..\..\resources\dinamic_libs\SDL2.dll"/>
+
+			<File Id="fileMainIni" Name="imgui.ini" Source="..\..\..\..\resources\imgui_configuration\imgui.ini"
 		</ComponentGroup>
 	</Fragment>
 </Wix>
