@@ -14,8 +14,9 @@ I started my journey with installers using InnoSetup, which served me well for a
 ### Setting Up Your Environment Download and Install WiX Toolset v5:
 First, head over to the WiX Toolset official website to download the latest version. Follow the installation instructions to get it up and running on your system.
 (https://wixtoolset.org/docs/intro/)
-There are some tips that are not present in the documentation, but it is still great enough to create basic installer. 
-Do not afraid to read and use docs from version 3 of Wix. Often nothing changed from v3 to v4/5 in particular attribute or element.
+There are some tips that are not present in the documentation, but it is still great enough to create basic installer.
+
+**Do not afraid to read and use docs from version 3 of Wix. Often nothing changed from v3 to v4/5 in particular attribute or element.**
 ### Integrate with Visual Studio:
 To make the most of WiX Toolset, integrate it with Visual Studio. You can do this by installing the WiX Toolset Visual Studio extension from the Visual Studio Marketplace.
 ### Using WiX Toolset Without Visual Studio:
@@ -24,7 +25,7 @@ To make the most of WiX Toolset, integrate it with Visual Studio. You can do thi
 #### Steps to Use WiX Toolset Without Visual Studio:
 1) Install .NET:
     
-    Ensure you have MSBuild and .NET 8.0 installed. You can download .NET 8.0 from the [official .NET website](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools).
+    Ensure you have MSBuild and .NET installed. You can download .NET from the [official .NET website](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools).
     Or install MSBuild using the actions:
     ```yaml
     - name: Add msbuild to PATH
@@ -69,9 +70,28 @@ To build the installer, use the following commands:
     ```
 
 ## Some bootstrapper tips
-If you need to install some more dependencies for running your application the best way to do this is Bundle with bootstrapper.
+If you need to install any more dependencies to run your application, the best way to do this is to connect bootstrapper.
+For example, I need to install VC_Redist.exe to launch my application.
+Since Windows cannot run two installers at the same time, there is a problem with dependency installers. And here is the bundle comes in.
+
+
 ### Building the Bootstrap Application:
-For example, I need to install the VC_Redist.exe for running my application.
+The structure of bundle with bootstrapper usually looks like this:
+```xml
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+     xmlns:bal="http://wixtoolset.org/schemas/v4/wxs/bal">
+  <Bundle>
+    <BootstrapperApplication>
+       <!-- some attributes and Some payloads  -->
+    </BootstrapperApplication>
+    <Chain>
+       <!-- Check the https://wixtoolset.org/docs/schema/wxs/chain/ -->
+       <MsiPackage SourceFile=""/>
+    </Chain>
+  </Bundle>
+</Wix>
+```
+
 I chose to use the x86 architecture for the bootstrap application because it is compatible with both x64 and x86 systems:
 ```shell
 wix build -arch x86 -ext WixToolset.BootstrapperApplications.wixext -ext WixToolset.Util.wixext -src .\bootstap.wxs -out Setup_GasFlowControl.exe
@@ -94,7 +114,7 @@ In 4-th and 5-th version of Wix the icon of the bootstrapper is not showing even
         Copyright="© 2024 Oleg Sirenko"
         AboutUrl="https://github.com/OlegSirenko/Monitoring_GasFlowControl"
         UpgradeCode="dfc3a102-ad36-44ad-8327-92c0d56ae401"
-        Condition="VersionNT &gt;= v6.1"
+        Condition="VersionNT &gt;= v6.1">
     <BootstrapperApplication>
         <bal:WixStandardBootstrapperApplication
                 LicenseUrl="https://github.com/OlegSirenko/Monitoring_GasFlowControl/blob/main/LICENSE"
@@ -139,4 +159,5 @@ IconSourceFile="..\..\..\resources\icon_preporation\icon_64.ico">
 
       <Payload Name="icon.ico" SourceFile="..\..\..\resources\icon_preporation\icon_64.ico" Compressed="yes" />
     </BootstrapperApplication>
+    <!-- The rest of your bundle should be placed here -->
 ```
