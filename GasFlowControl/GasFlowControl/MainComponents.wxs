@@ -3,7 +3,7 @@
 		<Icon Id="icon.exe" SourceFile="..\..\..\..\resources\icon_preporation\icon_64.ico"/>
 
 		<ComponentGroup Id="Main" Directory="INSTALLFOLDER">
-			<File Id="fileMainExe" Name="Monitor" Source="..\..\..\..\cmake-build-release\Release\Monitor.exe" KeyPath="true">
+			<File Id="fileMainExe" Name="Monitor.exe" Source="..\..\..\..\cmake-build-release\Release\Monitor.exe" KeyPath="true">
 				<Shortcut Name="Monitor" Directory="DesktopFolder"
 						 Advertise="yes" WorkingDirectory="INSTALLFOLDER" Icon="icon.exe"/>
 
