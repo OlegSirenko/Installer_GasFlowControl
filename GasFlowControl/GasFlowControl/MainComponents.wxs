@@ -3,7 +3,7 @@
 		<Icon Id="icon.exe" SourceFile="..\..\..\..\resources\icon_preporation\icon_64.ico"/>
 
 		<ComponentGroup Id="Main" Directory="INSTALLFOLDER">
-			<File Id="fileMainExe" Name="GasFlowControlMonitoringApp.exe" Source="..\..\..\..\cmake-build-release\Release\GasFlowControlMonitoringApp.exe" KeyPath="true">
+			<File Id="fileMainExe" Name="GasFlowControlMonitoringApp.exe" Source="..\..\..\..\cmake-build-release\Release\Monitor.exe" KeyPath="true">
 				<Shortcut Name="Gas Flow Control Monitoring Application" Directory="DesktopFolder"
 						 Advertise="yes" WorkingDirectory="INSTALLFOLDER" Icon="icon.exe"/>
 
