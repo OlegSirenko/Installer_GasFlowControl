@@ -3,7 +3,7 @@
   xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
 
   <Bundle
-    Name="Gas Flow Control Monitoring Application"
+    Name="Monitor"
     Version="1.0.2.0"
     Manufacturer="Oleg Sirenko"
     Copyright="© 2024 Oleg Sirenko"
